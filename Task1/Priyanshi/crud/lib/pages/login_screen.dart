@@ -99,19 +99,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 40,
                       ),
-                      Container(
-                        width: 300,
-                        height: 45,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
+                      
                       Builder(
                         builder: (context) {
                           return ElevatedButton(
                             style: ButtonStyle(
+                              shape:
+                            WidgetStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10))),
                                 minimumSize: WidgetStatePropertyAll(Size(300, 45)),
                                 backgroundColor:
                                     WidgetStateProperty.all(Colors.blue)),
