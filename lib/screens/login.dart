@@ -34,6 +34,8 @@ class _LoginFormState extends State<LoginForm> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text('WELCOME!',style: TextStyle(color: Colors.red,fontWeight: FontWeight.bold,fontSize: 35),),
+
               login
                   ? Container()
                   : TextFormField(
