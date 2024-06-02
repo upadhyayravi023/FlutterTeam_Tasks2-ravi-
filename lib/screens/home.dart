@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
       SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 10,),
+            SizedBox(height: 11,),
             Image(image: AssetImage("assets/images/student.png"),height: 150,width: 150,),
             ElevatedButton(onPressed: () async {
               await FirebaseAuth.instance.signOut();
