@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import 'loginpage.dart';
 
 class homepage extends StatefulWidget {
 
@@ -89,239 +92,234 @@ class _homepage extends State<homepage> {
       ),
 
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.symmetric(horizontal:15,vertical: 30),
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-        
-                    SizedBox(height: 10,),
-        
-                    ClipOval(
-                      child: Container(
-                        width: 180,
-                        height: 180,
-                        decoration: BoxDecoration(
-                          color: Color(0xff0072A3),
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage('Assets/Images/avatar.PNG'),
-                          ),
-                        ),
-                      )
-                    ),
-        
-                    SizedBox(height: 15,),
-        
-                    ElevatedButton(onPressed: () {
-                      Navigator.pop(context);
-                    },
-                        style: ElevatedButton.styleFrom(
-                          elevation: 1,
-                          backgroundColor: Colors.red,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
-                          ),
-                        ),
-                            child: Text ('Log Out',style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),)
-                    ),
-        
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'Name',
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.all(5),
-                          child: Container(
-                            height:45,
-                              width: 45,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage('Assets/Images/name.png'),
-                                ),
-                              ),
-                          ),
-                        ),
+            SizedBox(height: 10,),
 
-                      ),
-                      onChanged: (String name) {
-                        getName(name);
-                      },
-                    ),
-        
-                    SizedBox(height: 15,),
-        
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'Student ID',
-                          prefixIcon: Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Container(
-                        height:40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: DecorationImage(
-                            image: AssetImage('Assets/Images/student-id.png'),
-                          ),
+            ClipOval(
+              child: Container(
+                width: 180,
+                height: 180,
+                decoration: BoxDecoration(
+                  color: Color(0xff0072A3),
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('Assets/Images/avatar.PNG'),
+                  ),
+                ),
+              )
+            ),
+
+            SizedBox(height: 15,),
+
+            ElevatedButton(onPressed: () {
+              FirebaseAuth.instance.signOut().then((value)=>
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => Loginpage())));
+            },
+                style: ElevatedButton.styleFrom(
+                  elevation: 1,
+                  backgroundColor: Colors.red,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                    child: Text ('Log Out',style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),)
+            ),
+
+            TextFormField(
+              enabled: true,
+              decoration: InputDecoration(
+                  hintText: 'Name',
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Container(
+                    height:45,
+                      width: 45,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: AssetImage('Assets/Images/name.png'),
                         ),
                       ),
-                    ),
-                      ),
-                      onChanged: (String studentID) {
-                        getStudentID(studentID);
-                      },
-        
-                    ),
-                    SizedBox(height: 15,),
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'Student Program',
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.all(5),
-                          child: Container(
-                            height:40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage('Assets/Images/student program.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      onChanged: (String studentProgram) {
-                        getStudentProgram(studentProgram);
-                      },
-                    ),
-        
-                    SizedBox(height: 15,),
-        
-                    TextFormField(
-                      decoration: InputDecoration(
-                          hintText: 'CGPA',
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.all(5),
-                          child: Container(
-                            height:40,
-                            width: 40,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                image: AssetImage('Assets/Images/cgpa.png'),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      onChanged: (String cgpa) {
-                        getCGPA(cgpa);
-                      },
-                    ),
-        
-                    Container(
-                      padding: EdgeInsets.symmetric(vertical: 10),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children:[
-                          SizedBox(
-                            width: 82,
-                            child: ElevatedButton(
-                                child: Text('Create',style: TextStyle(fontSize: 18),),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.purple,
-                                  foregroundColor: Colors.white,
-                                    padding: EdgeInsets.symmetric(horizontal: 2)
-                                ),
-                                onPressed: () {
-                                  createData();
-                                }
-                            ),
-                          ),
-                          SizedBox(
-                            width: 80,
-                            child: ElevatedButton(
-                                onPressed:() {
-                                  readData();
-                                },
-                                child: Text('Read',style: TextStyle(fontSize: 18),),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.green,
-                                  foregroundColor: Colors.white,
-                                    padding: EdgeInsets.symmetric(horizontal: 2)
-                                )
-                            ),
-                          ),
-                          SizedBox(
-                            width: 80,
-                            child: ElevatedButton(
-                                onPressed:() {
-                                  updateData();
-                                },
-                                child: Text('Update',style: TextStyle(fontSize: 18),),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.lightBlue,
-                                  foregroundColor: Colors.white,
-                                    padding: EdgeInsets.symmetric(horizontal: 2)
-                                )
-                            ),
-                          ),
-                          SizedBox(
-                            width: 80,
-                            child: ElevatedButton(
-                                onPressed:() {
-                                  deleteData();
-                                },
-                                child: Text('Delete',style: TextStyle(fontSize: 18),),
-                                style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.red,
-                                  foregroundColor: Colors.white,
-                                  padding: EdgeInsets.symmetric(horizontal: 2)
-                                )
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                            width: 82,
-                            child: Text('    Name', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
-        
-                        SizedBox(
-                            width: 82,
-                            child: Text('Student ID', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
-        
-                        SizedBox(
-                            width: 82,
-                            child: Text('Student Program', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
-        
-                        SizedBox(
-                            width: 82,
-                            child: Text('CGPA', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
-                      ],
-                    ),
-                  ]
+                  ),
+                ),
+
+              ),
+              onChanged: (String name) {
+                getName(name);
+              },
+            ),
+
+            SizedBox(height: 15,),
+
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Student ID',
+                  prefixIcon: Padding(
+              padding: EdgeInsets.all(5),
+              child: Container(
+                height:40,
+                width: 40,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: AssetImage('Assets/Images/student-id.png'),
+                  ),
+                ),
               ),
             ),
-            StreamBuilder <QuerySnapshot> (
-              stream: FirebaseFirestore.instance.collection('StudentRecord').
-              snapshots(),
-              builder: (context, snapshot) {
-            
-                if(snapshot.connectionState == ConnectionState.active) {
-                  if(snapshot.hasData && snapshot.data != null) {
-                    return Expanded(
-                      child: ListView.builder(
+              ),
+              onChanged: (String studentID) {
+                getStudentID(studentID);
+              },
+
+            ),
+            SizedBox(height: 15,),
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'Student Program',
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Container(
+                    height:40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('Assets/Images/student program.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              onChanged: (String studentProgram) {
+                getStudentProgram(studentProgram);
+              },
+            ),
+
+            SizedBox(height: 15,),
+
+            TextFormField(
+              decoration: InputDecoration(
+                  hintText: 'CGPA',
+                prefixIcon: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Container(
+                    height:40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage('Assets/Images/cgpa.png'),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              onChanged: (String cgpa) {
+                getCGPA(cgpa);
+              },
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children:[
+                  SizedBox(
+                    width: 82,
+                    child: ElevatedButton(
+                        child: Text('Create',style: TextStyle(fontSize: 18),),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.purple,
+                          foregroundColor: Colors.white,
+                            padding: EdgeInsets.symmetric(horizontal: 2)
+                        ),
+                        onPressed: () {
+                          createData();
+                        }
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                    child: ElevatedButton(
+                        onPressed:() {
+                          readData();
+                        },
+                        child: Text('Read',style: TextStyle(fontSize: 18),),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          foregroundColor: Colors.white,
+                            padding: EdgeInsets.symmetric(horizontal: 2)
+                        )
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                    child: ElevatedButton(
+                        onPressed:() {
+                          updateData();
+                        },
+                        child: Text('Update',style: TextStyle(fontSize: 18),),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.lightBlue,
+                          foregroundColor: Colors.white,
+                            padding: EdgeInsets.symmetric(horizontal: 2)
+                        )
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                    child: ElevatedButton(
+                        onPressed:() {
+                          deleteData();
+                        },
+                        child: Text('Delete',style: TextStyle(fontSize: 18),),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          padding: EdgeInsets.symmetric(horizontal: 2)
+                        )
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                    width: 82,
+                    child: Text('    Name', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
+
+                SizedBox(
+                    width: 82,
+                    child: Text('Student ID', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
+
+                SizedBox(
+                    width: 82,
+                    child: Text('Student Program', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
+
+                SizedBox(
+                    width: 82,
+                    child: Text('CGPA', style: TextStyle(fontSize:18 , fontWeight: FontWeight.bold),)),
+              ],
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height*0.5,
+              width: MediaQuery.of(context).size.width,
+              child: StreamBuilder <QuerySnapshot> (
+                stream: FirebaseFirestore.instance.collection('StudentRecord').
+                snapshots(),
+                builder: (context, snapshot) {
+                  if(snapshot.connectionState == ConnectionState.active) {
+                    if(snapshot.hasData && snapshot.data != null) {
+                      return ListView.builder(
                           itemCount: snapshot.data!.docs.length,
                           itemBuilder: (context, index) {
-            
+
                             Map<String, dynamic> studentMap = snapshot.data!.
                             docs[index].data() as Map<String, dynamic>;
                             return Row(
@@ -353,19 +351,19 @@ class _homepage extends State<homepage> {
                               ],
                             );
                           }
-                      ),
-                    );
+                      );
+                    }
+                    else {
+                      return Text('No Data');
+                    }
                   }
                   else {
-                    return Text('No Data');
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
                   }
-                }
-                else {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
+                },
+              ),
             ),
           ],
         ),

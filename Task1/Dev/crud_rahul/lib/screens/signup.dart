@@ -1,20 +1,20 @@
 
 import 'package:crud_rahul/screens/homepage.dart';
-import 'package:crud_rahul/screens/signup.dart';
+import 'package:crud_rahul/screens/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth_platform_interface/firebase_auth_platform_interface.dart';
 
 
-class Loginpage extends StatefulWidget {
-  const Loginpage({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Loginpage> createState() => _LoginpageState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _LoginpageState extends State<Loginpage> {
+class _SignupState extends State<Signup> {
 
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
@@ -32,7 +32,7 @@ class _LoginpageState extends State<Loginpage> {
       appBar: AppBar(
         elevation: 1,
         centerTitle: true,
-        title: Text('Login', style: TextStyle(fontSize: 30),),
+        title: Text('SignUp', style: TextStyle(fontSize: 30),),
         backgroundColor: Colors.blue,
       ),
       body: Form(
@@ -107,9 +107,11 @@ class _LoginpageState extends State<Loginpage> {
                     width: 325,
                     child: ElevatedButton(
                       onPressed: () {
-                       login(email.text, password.text);
+                        signup(email.text, password.text);
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Loginpage()));
                       },
-                      child: Text("LogIn",
+                      child: Text("SignUp",
                         style: TextStyle(color: Colors.white, fontSize: 20),),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
@@ -128,7 +130,7 @@ class _LoginpageState extends State<Loginpage> {
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(
                           builder: (context) => Signup()));
-                    }, child:Text("Create an account"),
+                    }, child:Text("Signed Up, Just Login"),
                   )
 
                 ],
@@ -140,33 +142,21 @@ class _LoginpageState extends State<Loginpage> {
     );
   }
 
-  login(String email, String password) async
-  {
-    try {
-      final credential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+  signup(String email,String password)async{
+    try{
+      UserCredential userCredential = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
           email: email,
-          password: password
-      ).then((value)=>Navigator.push(context, MaterialPageRoute(
-          builder: (context) => homepage())));
-    } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found') {
-        print('No user found for that email.');
+          password: password);
+    }on FirebaseAuthException catch(e){
+      if(e.code == "weak password"){
+        print('Password to weak');
       }
-      else if (e.code == 'wrong-password') {
-        print('Wrong password provided for that user.');
+      else if (e.code == 'email already in use '){
+        print('Account already existed with this email');
       }
-      else {
-        try {
-          UserCredential userCredential = await FirebaseAuth.instance.
-          signInWithEmailAndPassword(email: email, password: password);
-          if (userCredential.user != null) {
-            Navigator.push(context, MaterialPageRoute(
-                builder: (context) => homepage()));
-          }
-        } on FirebaseAuthException catch (ex) {
-          print(ex.code.toString());
-        }
-      }
+    }catch (e){
+      print(e);
     }
   }
 }

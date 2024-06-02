@@ -1,5 +1,6 @@
 import 'package:crud_rahul/screens/homepage.dart';
 import 'package:crud_rahul/screens/loginpage.dart';
+import 'package:crud_rahul/screens/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-    "/":(context) => homepage(),
+    "/":(context) => SplashScreen(),
     "home":(context)=> homepage(),
     }
     );
