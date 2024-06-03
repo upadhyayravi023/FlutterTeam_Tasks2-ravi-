@@ -42,17 +42,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAlT1gx3fRxHre7jUfeObzidV_3rm29IKY',
-    appId: '1:90120817384:web:4c4735299a056b77d9575d',
+    appId: '1:90120817384:web:25b3431aa15ffe34d9575d',
     messagingSenderId: '90120817384',
     projectId: 'tasknew-b6c17',
     authDomain: 'tasknew-b6c17.firebaseapp.com',
     storageBucket: 'tasknew-b6c17.appspot.com',
-    measurementId: 'G-9TVDC0MD3Z',
+    measurementId: 'G-599KY5RY9R',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBkl--U6qJcuieN94nLM7L4EEXf6TxOMlU',
-    appId: '1:90120817384:android:f9eabb9060627bf7d9575d',
+    appId: '1:90120817384:android:05ec0a104fa7b724d9575d',
     messagingSenderId: '90120817384',
     projectId: 'tasknew-b6c17',
     storageBucket: 'tasknew-b6c17.appspot.com',
@@ -60,29 +60,30 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAFyKEnh5rQjsswm3S6uAou0TPeQaykBRk',
-    appId: '1:90120817384:ios:6d895cb1733835fad9575d',
+    appId: '1:90120817384:ios:8ae6355cf217c5d2d9575d',
     messagingSenderId: '90120817384',
     projectId: 'tasknew-b6c17',
     storageBucket: 'tasknew-b6c17.appspot.com',
-    iosBundleId: 'com.example.crudApp',
+    iosBundleId: 'com.example.crudapp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyAFyKEnh5rQjsswm3S6uAou0TPeQaykBRk',
-    appId: '1:90120817384:ios:6d895cb1733835fad9575d',
+    appId: '1:90120817384:ios:8ae6355cf217c5d2d9575d',
     messagingSenderId: '90120817384',
     projectId: 'tasknew-b6c17',
     storageBucket: 'tasknew-b6c17.appspot.com',
-    iosBundleId: 'com.example.crudApp',
+    iosBundleId: 'com.example.crudapp',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyAlT1gx3fRxHre7jUfeObzidV_3rm29IKY',
-    appId: '1:90120817384:web:3739c94b0a6e8e7dd9575d',
+    appId: '1:90120817384:web:25b3431aa15ffe34d9575d',
     messagingSenderId: '90120817384',
     projectId: 'tasknew-b6c17',
     authDomain: 'tasknew-b6c17.firebaseapp.com',
     storageBucket: 'tasknew-b6c17.appspot.com',
-    measurementId: 'G-7NZSNH9KM5',
+    measurementId: 'G-599KY5RY9R',
   );
+
 }
