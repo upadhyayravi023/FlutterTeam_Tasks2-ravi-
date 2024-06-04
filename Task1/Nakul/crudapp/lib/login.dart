@@ -42,6 +42,8 @@ class _LoginState extends State<Login> {
 
   @override
   Widget build(BuildContext context) {
+    final _width=MediaQuery.of(context).size.width;
+    final _height=MediaQuery.of(context).size.height;
     return Scaffold(
        appBar: AppBar(
         backgroundColor: Colors.blue,

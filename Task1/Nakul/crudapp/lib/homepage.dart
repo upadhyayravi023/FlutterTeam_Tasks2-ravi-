@@ -104,6 +104,8 @@ class _homepageState extends State<homepage> {
 
   @override
   Widget build(BuildContext context) {
+    final _width=MediaQuery.of(context).size.width;
+    final _height=MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
        backgroundColor: Colors.yellow,
@@ -126,7 +128,7 @@ class _homepageState extends State<homepage> {
                   backgroundColor: Colors.grey,
                   radius: 67,
                   
-                  backgroundImage: AssetImage("asset/images/student.png"),
+                  backgroundImage: AssetImage("assets/images/student.png"),
                 ),
                 SizedBox(height: 20,),
                 Container(
@@ -156,7 +158,7 @@ class _homepageState extends State<homepage> {
         decoration: InputDecoration(
           hintText: " Name",
           
-          prefixIcon: Image(image: AssetImage("asset/images/pro.png"),height: 19,),
+          prefixIcon: Image(image: AssetImage("assets/images/pro.png"),height: 19,),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide(
@@ -190,7 +192,7 @@ class _homepageState extends State<homepage> {
         decoration: InputDecoration(
           hintText: "  Student ID",
           
-          prefixIcon: Image(image: AssetImage("asset/images/card.png"),height: 19,),
+          prefixIcon: Image(image: AssetImage("assets/images/card.png"),height: 19,),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide(
@@ -223,7 +225,7 @@ class _homepageState extends State<homepage> {
         decoration: InputDecoration(
           hintText: "Student Program",
           
-          prefixIcon: Image(image: AssetImage("asset/images/program.png"),height: 19,),
+          prefixIcon: Image(image: AssetImage("assets/images/program.png"),height: 19,),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide(
@@ -256,7 +258,7 @@ class _homepageState extends State<homepage> {
         decoration: InputDecoration(
           hintText: "CGPA",
           
-          prefixIcon: Image(image: AssetImage("asset/images/cgp.png"),height: 19,),
+          prefixIcon: Image(image: AssetImage("assets/images/cgp.png"),height: 19,),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
             borderSide: BorderSide(
