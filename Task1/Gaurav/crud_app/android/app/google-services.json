@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "268784401813",
+    "project_id": "flteamsum",
+    "storage_bucket": "flteamsum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268784401813:android:24294028654da0a72cca9c",
+        "android_client_info": {
+          "package_name": "com.example.crud_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr-rObahe-t1J-jVH4mRsNjD9YgVT12HQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
