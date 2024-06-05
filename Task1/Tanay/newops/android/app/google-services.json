@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "949475653468",
+    "project_id": "crudoops4525",
+    "storage_bucket": "crudoops4525.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949475653468:android:21f455e6b36110289bb399",
+        "android_client_info": {
+          "package_name": "com.example.crudoops"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH7itXNv9cRsiROAfWN-5Qk_RF1rwn99I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949475653468:android:bcd5e95c4217409d9bb399",
+        "android_client_info": {
+          "package_name": "com.example.newops"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH7itXNv9cRsiROAfWN-5Qk_RF1rwn99I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
