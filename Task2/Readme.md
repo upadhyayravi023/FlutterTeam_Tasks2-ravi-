@@ -13,7 +13,12 @@ This project implements a Flutter-based chatbot using the Gemini API, enabling u
 - Integration with the Gemini API for processing inputs and generating responses.
 
 ## Screenshots
+![WhatsApp Image 2024-06-16 at 22 25 27_c91d264a](https://github.com/dev04sa/FlutterTeam_Tasks/assets/129666293/532ab29b-412f-40ca-97c5-ec3e3791b34d)
 
+
+
+
+https://github.com/dev04sa/FlutterTeam_Tasks/assets/129666293/483b4a15-9be7-4e59-a73e-66e51311f280
 
 
 
