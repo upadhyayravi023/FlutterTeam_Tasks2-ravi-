@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1061942770542",
+    "project_id": "student-record-task2",
+    "storage_bucket": "student-record-task2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061942770542:android:19f94670fc034bf86bdf7f",
+        "android_client_info": {
+          "package_name": "com.example.studentsrecord1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEWLveJr2KfKFdZLJ54y6B4Fh4zUGb3dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
