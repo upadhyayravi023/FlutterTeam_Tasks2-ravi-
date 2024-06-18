@@ -16,6 +16,11 @@ This project implements a Flutter-based chatbot using the Gemini API, enabling u
 
 
 
+![Screenshot_2024-06-18-21-43-26-95_f01bf190a5edd61eb5fc570d4cbd5c84](https://github.com/gaurav-33/FlutterTeam_Tasks/assets/164652539/5e04cb26-a231-45eb-a394-dcc310033e8a)
+
+
+https://github.com/gaurav-33/FlutterTeam_Tasks/assets/164652539/c2cfa9e0-e1d7-4a2f-9dfd-2d8147b80448
+
 
 
 
