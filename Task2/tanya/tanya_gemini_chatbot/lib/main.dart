@@ -3,7 +3,7 @@ import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:tanya_gemini_chatbot/homepage.dart';
 
 void main() {
-  Gemini.init(apiKey: 'GEMINI_API_KEY');
+  Gemini.init(apiKey: 'AIzaSyB9sRcQm16DyMg6f2oogQ-oe3-iLKfv_RQ');
   runApp(MyApp());
 }
 

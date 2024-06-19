@@ -1,7 +1,10 @@
+import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -38,8 +41,13 @@ class _HomepageState extends State<Homepage> {
 
   Widget _buildUI() {
     return DashChat(
-        currentUser: currentUser, onSend: _sendMessage, messages: messages);
-  } 
+        inputOptions: InputOptions(trailing: [
+          IconButton(onPressed: _sendMediaMessage, icon: Icon(Icons.image),color:Color.fromARGB(255, 36, 86, 142) ,)
+        ]),
+        currentUser: currentUser,
+        onSend: _sendMessage,
+        messages: messages);
+  }
 
   void _sendMessage(ChatMessage chatMessage) {
     setState(() {
@@ -47,23 +55,30 @@ class _HomepageState extends State<Homepage> {
     });
     try {
       String question = chatMessage.text;
-      gemini.streamGenerateContent(question).listen((event) {
+      List<Uint8List>? images;
+      if(chatMessage.medias?.isNotEmpty??false){
+images=[File(chatMessage.medias!.first.url).readAsBytesSync(),];
+      }
+      gemini.streamGenerateContent(question,images: images,).listen((event) {
         ChatMessage? lastMessage = messages.firstOrNull;
         if (lastMessage != null && lastMessage.user == geminiuser) {
-          lastMessage=messages.removeAt(0);
-          String response = event.content?.parts
-                  ?.fold("", (previous, current) => "$previous$current") ??
+          lastMessage = messages.removeAt(0);
+          String response = event.content?.parts?.fold(
+                  "", (previous, current) => "$previous ${current.text}") ??
               "";
-         lastMessage.text=response;
-         setState(() {
-           messages=[lastMessage!, ...messages];
-         });
+          lastMessage.text += response;
+          setState(() {
+            messages = [lastMessage!, ...messages];
+          });
         } else {
-          String response = event.content?.parts
-                  ?.fold("", (previous, current) => "$previous$current") ??
+          String response = event.content?.parts?.fold(
+                  "", (previous, current) => "$previous ${current.text}") ??
               "";
           ChatMessage message = ChatMessage(
-              user: geminiuser, createdAt: DateTime.now(), text: response,);
+            user: geminiuser,
+            createdAt: DateTime.now(),
+            text: response,
+          );
           setState(() {
             messages = [message, ...messages];
           });
@@ -71,6 +86,23 @@ class _HomepageState extends State<Homepage> {
       });
     } catch (e) {
       print(e);
+    }
+  }
+
+  void _sendMediaMessage() async {
+    ImagePicker picker = ImagePicker();
+    XFile? file = await picker.pickImage(
+      source: ImageSource.gallery,
+    );
+    if (file != null) {
+      ChatMessage chatMessage = ChatMessage(
+          user: currentUser,
+          createdAt: DateTime.now(),
+          text: "Describe this picture?",
+          medias: [
+            ChatMedia(url: file.path, fileName: "", type: MediaType.image)
+          ]);
+          _sendMessage(chatMessage);
     }
   }
 }
