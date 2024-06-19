@@ -1,9 +1,8 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
-
 import '../chat_screen.dart';
 import '../constants/color_scheme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 
 void main() async{
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.neptune700),
         useMaterial3: true,
       ),
-      home: ChatScreen(),
+      home: const ChatScreen(),
     );
   }
 }

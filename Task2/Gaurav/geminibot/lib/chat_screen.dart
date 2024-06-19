@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:dash_chat_2/dash_chat_2.dart';
@@ -22,6 +23,7 @@ class _ChatScreenState extends State<ChatScreen> {
       firstName: "Gemini",
       profileImage:
           "https://seeklogo.com/images/G/google-gemini-logo-A5787B2669-seeklogo.com.png");
+  List<ChatUser> _typing = <ChatUser>[];
   List<ChatMessage> messages = [];
 
   @override
@@ -47,10 +49,12 @@ class _ChatScreenState extends State<ChatScreen> {
           )
         ]),
         messageOptions: const MessageOptions(
-            containerColor: AppColors.neptune400,
-            currentUserContainerColor: AppColors.neptune500,
-            textColor: AppColors.neptune950,
-            currentUserTextColor: AppColors.neptune100),
+          containerColor: AppColors.neptune400,
+          currentUserContainerColor: AppColors.neptune500,
+          textColor: AppColors.neptune950,
+          currentUserTextColor: AppColors.neptune100,
+        ),
+        typingUsers: _typing,
       ),
     );
   }
@@ -58,6 +62,7 @@ class _ChatScreenState extends State<ChatScreen> {
   void onSend(ChatMessage m) {
     setState(() {
       messages = [m, ...messages];
+      _typing.add(geminiUser);
     });
     try {
       String query = m.text;
@@ -66,6 +71,7 @@ class _ChatScreenState extends State<ChatScreen> {
         images = [File(m.medias!.first.url).readAsBytesSync()];
       }
       gemini.streamGenerateContent(query, images: images).listen((event) {
+        // print(">>>>>>>${event.content?.parts}");
         ChatMessage? lastMessage = messages.firstOrNull;
         if (lastMessage != null && lastMessage.user == geminiUser) {
           lastMessage = messages.removeAt(0);
@@ -74,6 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
               "}";
           lastMessage.text += response;
           setState(() {
+            _typing.remove(geminiUser);
             messages = [lastMessage!, ...messages];
           });
         } else {
@@ -83,12 +90,17 @@ class _ChatScreenState extends State<ChatScreen> {
           ChatMessage newmessage = ChatMessage(
               user: geminiUser, createdAt: DateTime.now(), text: response);
           setState(() {
+            _typing.remove(geminiUser);
             messages = [newmessage, ...messages];
           });
         }
+      }).onError((e) {
+        log('streamGenerateContent exception', error: e);
+        // print(e);
       });
     } catch (e) {
-      print(e);
+      // print(e);
+      log('streamGenerateContent exception', error: e);
     }
   }
 
