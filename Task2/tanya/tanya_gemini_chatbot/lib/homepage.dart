@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:dash_chat_2/dash_chat_2.dart';
@@ -48,7 +47,7 @@ class _HomepageState extends State<Homepage> {
         onSend: _sendMessage,
         messages: messages);
   }
-
+  
   void _sendMessage(ChatMessage chatMessage) {
     setState(() {
       messages = [chatMessage, ...messages];
