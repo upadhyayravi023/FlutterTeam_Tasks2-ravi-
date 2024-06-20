@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:tanya_gemini_chatbot/homepage.dart';
 
-void main() {
+Future<void> main() async {
   Gemini.init(apiKey: 'AIzaSyB9sRcQm16DyMg6f2oogQ-oe3-iLKfv_RQ');
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName:".env");
   runApp(MyApp());
 }
 
