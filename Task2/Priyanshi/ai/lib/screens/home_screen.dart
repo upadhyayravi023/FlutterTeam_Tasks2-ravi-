@@ -1,19 +1,18 @@
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:dash_chat_2/dash_chat_2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 import 'package:image_picker/image_picker.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   final Gemini gemini = Gemini.instance;
 
   List<ChatMessage> messages = [];
@@ -22,41 +21,45 @@ class _HomePageState extends State<HomePage> {
       id: "0",
       firstName: "User",
       profileImage:
-          "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745");
+          "https://img.freepik.com/premium-vector/avatar-profile-pink-neon-icon-brick-wall-background-colour-neon-vector-icon_549897-254.jpg");
   ChatUser geminiUser = ChatUser(
     id: "1",
     firstName: "Gemini",
     profileImage:
-        "https://seeklogo.com/images/G/google-gemini-logo-A5787B2669-seeklogo.com.png",
+        "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_SS.width-1300.jpg",
   );
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 53, 20, 111),
-        centerTitle: true,
-        title: const Text(
-          "Gemini Chat",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      ),
-      body: _buildUI(),
-    );
-  }
-
-  Widget _buildUI() {
-    return DashChat(
-      inputOptions: InputOptions(trailing: [
-        IconButton(
-          onPressed: _sendMediaMessage,
-          icon: const Icon(
-            Icons.image,
+    return Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              colors: [Colors.purple, Colors.black],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter)),
+      child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 64, 10, 103),
+            centerTitle: true,
+            title: const Text(
+              "Gemini CHAT",
+              style: TextStyle(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  fontWeight: FontWeight.bold),
+            ),
           ),
-        )
-      ]),
-      currentUser: currentUser,
-      onSend: _sendMessage,
-      messages: messages,
+          body: DashChat(
+            inputOptions: InputOptions(trailing: [
+              IconButton(
+                onPressed: _sendMediaMessage,
+                icon: const Icon(
+                  Icons.image,
+                ),
+              )
+            ]),
+            currentUser: currentUser,
+            onSend: _sendMessage,
+            messages: messages,
+          )),
     );
   }
 
