@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gemini ChatBot',
-      theme: ThemeData(primaryColor: Color.fromARGB(255, 59, 14, 119)),
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );

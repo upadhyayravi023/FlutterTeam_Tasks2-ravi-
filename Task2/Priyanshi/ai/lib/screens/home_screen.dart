@@ -30,40 +30,43 @@ class _HomeScreenState extends State<HomeScreen> {
   );
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Colors.purple, Colors.black],
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 1, 1, 18),
+          centerTitle: true,
+          title: const Text(
+            "Gemini CHAT",
+            style: TextStyle(
+                color: Color.fromARGB(255, 255, 255, 255),
+                fontWeight: FontWeight.bold),
+          ),
+        ),
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter)),
-      child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 64, 10, 103),
-            centerTitle: true,
-            title: const Text(
-              "Gemini CHAT",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontWeight: FontWeight.bold),
+              end: Alignment.bottomCenter,
+              colors: [Color.fromARGB(255, 64, 10, 103), Colors.black],
+              stops: [0.0, 0.67],
             ),
           ),
-          body: DashChat(
+          child: DashChat(
             inputOptions: InputOptions(trailing: [
               IconButton(
-                onPressed: _sendMediaMessage,
+                onPressed: _imageQuestion,
                 icon: const Icon(
                   Icons.image,
                 ),
               )
             ]),
             currentUser: currentUser,
-            onSend: _sendMessage,
+            onSend: _textQuestion,
             messages: messages,
-          )),
-    );
+          ),
+        ));
   }
 
-  void _sendMessage(ChatMessage chatMessage) {
+  void _textQuestion(ChatMessage chatMessage) {
     setState(() {
       messages = [chatMessage, ...messages];
     });
@@ -112,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
-  void _sendMediaMessage() async {
+  void _imageQuestion() async {
     ImagePicker picker = ImagePicker();
     XFile? file = await picker.pickImage(
       source: ImageSource.gallery,
@@ -130,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       );
-      _sendMessage(chatMessage);
+      _textQuestion(chatMessage);
     }
   }
 }
