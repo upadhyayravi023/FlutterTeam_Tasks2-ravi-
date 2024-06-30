@@ -9,7 +9,6 @@
 .history
 .svn/
 migrate_working_dir/
-
 *.env
 
 
@@ -44,3 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+*.env
+.env
+./Task2/Priyanshi/ai/.env
