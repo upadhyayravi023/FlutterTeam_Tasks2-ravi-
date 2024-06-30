@@ -1,9 +1,13 @@
+
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:gemini_ai_bot/widgets/chat_ui.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:intl/intl.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({super.key});
@@ -20,9 +24,11 @@ class _ChatPageState extends State<ChatPage> {
   bool showIcon = false;
   String prompt = '';
   late final response;
-  late final content;
+  //bool isLoading = false;
+ // late final content;
   late final chat;
-  final List<({Image? image, String? text, bool isUser})> contentList =  <({Image? image, String? text, bool isUser})>[];
+  final List<({String? image, String? text, bool isUser})> contentList =  <({String? image, String? text, bool isUser})>[];
+  final ScrollController scrollController = ScrollController();
 
   void initState() {
     super.initState();
@@ -60,9 +66,12 @@ class _ChatPageState extends State<ChatPage> {
               child: Container(
                 padding: EdgeInsets.symmetric(vertical: 5,horizontal: 5),
                 child: ListView.builder(itemBuilder: (BuildContext context, int index) {
-                  return chat_ui(isUser: contentList[index].isUser, text: contentList[index].text, time: "12:00 AM (12 June)", image: contentList[index].image,);
+                  DateTime now = DateTime.now();
+                  String formattedDate = DateFormat('kk:mm - d MMM').format(now);
+                  return chat_ui(isUser: contentList[index].isUser, text: contentList[index].text, time: formattedDate, image: contentList[index].image,);
                 },
                 itemCount: contentList.length,
+                  controller: scrollController,
                 )
               ),
             ),
@@ -72,9 +81,12 @@ class _ChatPageState extends State<ChatPage> {
               color: Colors.blueAccent,
               child: Row(
                 children: [
-                  Icon(
-                    Icons.add_photo_alternate_outlined,
+                  IconButton(
+                   icon:  Icon(Icons.add_photo_alternate_outlined),
                     color: Colors.white,
+                    onPressed: () {
+                     sendImagePrompt(chatText.text);
+                    },
                   ),
                   SizedBox(
                     width: 5,
@@ -128,15 +140,64 @@ class _ChatPageState extends State<ChatPage> {
 
   }
   Future<void> sendTextChat(String chat) async{
+   // scrollDown();
     contentList.add((image: null,text: chat,isUser: true));
     setState(() {
-
+      contentList.add((image: null,text: "Gemini is typing!!!",isUser: false));
+      // isLoading = true;
+      chatText.clear();
+        scrollDown();
     });
-    content = [Content.text(chat)];
+   final content = [Content.text(chat)];
     response = await model.generateContent(content);
-    contentList.add((image: null,text: response.text,isUser: false));
+    contentList.insert(contentList.length-1, (image: null, text: response.text, isUser: false));
+    //contentList.add((image: null,text: response.text,isUser: false));
     setState(() {
-
+      contentList.removeAt(contentList.length-1);
+      // isLoading = false;
+      scrollDown();
     });
+  }
+  Future<void> sendImagePrompt(String chat) async{
+    Uint8List byteData;
+   ImagePicker imagePicker = new ImagePicker();
+   final XFile? pickedFile = await imagePicker.pickImage(source: ImageSource.gallery);
+  if(pickedFile != null){
+    byteData = await pickedFile.readAsBytes();
+
+  contentList.add((image: pickedFile.path,text: chat.isNotEmpty?chat:"Describe the image.",isUser: true));
+  setState(() {
+    // isLoading = true;
+    contentList.add((image: null,text: "Gemini is typing!!!",isUser: false));
+    chatText.clear();
+    scrollDown();
+  });
+  final content = [Content.multi([
+    TextPart(chat.isNotEmpty?chat:"Describe the image."),
+    DataPart("image/*", byteData)
+  ])];
+
+    var response = await model.generateContent(content);
+    var text = response.text;
+    contentList.insert(contentList.length-1, (image: null, text: text, isUser: false));
+   // contentList.add((image: null, text: text, isUser: false));
+    setState(() {
+      contentList.removeAt(contentList.length-1);
+      // isLoading = false;
+      scrollDown();
+    });
+  }
+  }
+
+  void scrollDown(){
+    WidgetsBinding.instance.addPostFrameCallback(
+          (_) => scrollController.animateTo(
+        scrollController.position.maxScrollExtent,
+        duration: const Duration(
+          milliseconds: 750,
+        ),
+        curve: Curves.easeOutCirc,
+      ),
+    );
   }
 }
