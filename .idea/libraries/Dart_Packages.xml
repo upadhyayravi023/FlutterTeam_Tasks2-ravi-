@@ -5,7 +5,8 @@
         <entry key="_flutterfire_internals">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.34/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
             </list>
           </value>
         </entry>
@@ -13,6 +14,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
             </list>
           </value>
         </entry>
@@ -20,6 +22,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -27,6 +30,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
             </list>
           </value>
         </entry>
@@ -34,27 +38,31 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="cloud_firestore">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.4/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
             </list>
           </value>
         </entry>
         <entry key="cloud_firestore_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.4/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
             </list>
           </value>
         </entry>
         <entry key="cloud_firestore_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.4/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
             </list>
           </value>
         </entry>
@@ -62,6 +70,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
             </list>
           </value>
         </entry>
@@ -69,6 +78,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
             </list>
           </value>
         </entry>
@@ -76,76 +86,61 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_auth">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.19.6/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_auth_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.2.7/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_auth_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.11.6/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_core">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.31.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_core_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="firebase_core_web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.0/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="firebase_storage">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage-11.7.7/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="firebase_storage_platform_interface">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_platform_interface-5.1.22/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="firebase_storage_web">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_web-3.9.7/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/flutter/packages/flutter/lib" />
+              <option value="$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/packages/flutter/lib" />
+              <option value="D:/code apps/flutter/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -153,35 +148,29 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-4.0.0/lib" />
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$USER_HOME$/flutter/packages/flutter_test/lib" />
+              <option value="$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/packages/flutter_test/lib" />
+              <option value="D:/code apps/flutter/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
-              <option value="$USER_HOME$/flutter/packages/flutter_web_plugins/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="http">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.1/lib" />
+              <option value="D:/code apps/flutter/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
         <entry key="http_parser">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
             </list>
           </value>
         </entry>
@@ -189,6 +178,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4/lib" />
             </list>
           </value>
         </entry>
@@ -196,6 +186,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3/lib" />
             </list>
           </value>
         </entry>
@@ -203,6 +194,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
             </list>
           </value>
         </entry>
@@ -210,7 +202,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0/lib" />
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -218,6 +210,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
             </list>
           </value>
         </entry>
@@ -225,6 +218,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
             </list>
           </value>
         </entry>
@@ -232,6 +226,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0/lib" />
             </list>
           </value>
         </entry>
@@ -239,20 +234,29 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="plugin_platform_interface">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="recordstudent">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../lib" />
             </list>
           </value>
         </entry>
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$USER_HOME$/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="D:/code apps/flutter/flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -260,6 +264,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
             </list>
           </value>
         </entry>
@@ -267,6 +272,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
             </list>
           </value>
         </entry>
@@ -274,6 +280,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
             </list>
           </value>
         </entry>
@@ -281,6 +288,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
             </list>
           </value>
         </entry>
@@ -288,6 +296,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
             </list>
           </value>
         </entry>
@@ -295,13 +304,14 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0/lib" />
             </list>
           </value>
         </entry>
         <entry key="typed_data">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
             </list>
           </value>
         </entry>
@@ -309,6 +319,7 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
             </list>
           </value>
         </entry>
@@ -316,67 +327,98 @@
           <value>
             <list>
               <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1/lib" />
             </list>
           </value>
         </entry>
         <entry key="web">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
+              <option value="$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
             </list>
           </value>
         </entry>
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage-11.7.7/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_platform_interface-5.1.22/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_storage_web-3.9.7/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-4.0.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.2.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
-      <root url="file://$USER_HOME$/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$USER_HOME$/flutter/packages/flutter/lib" />
-      <root url="file://$USER_HOME$/flutter/packages/flutter_test/lib" />
-      <root url="file://$USER_HOME$/flutter/packages/flutter_web_plugins/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/Downloads/flutter_windows_3.16.5-stable/flutter/packages/flutter_test/lib" />
+      <root url="file://$PROJECT_DIR$/../lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.34/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/_flutterfire_internals-1.3.35/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore-4.17.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_platform_interface-6.2.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cloud_firestore_web-3.12.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.19.6/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth-4.20.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.2.7/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_platform_interface-7.3.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.11.6/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_auth_web-5.12.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.31.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core-2.32.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_platform_interface-5.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/firebase_core_web-2.17.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-3.0.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/lints-3.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../../../anike/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.5.1/lib" />
+      <root url="file://D:/code apps/flutter/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://D:/code apps/flutter/flutter/packages/flutter/lib" />
+      <root url="file://D:/code apps/flutter/flutter/packages/flutter_test/lib" />
+      <root url="file://D:/code apps/flutter/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
