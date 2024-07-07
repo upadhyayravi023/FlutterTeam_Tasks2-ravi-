@@ -1,1 +1,0 @@
-String API_key = "AIzaSyBt_a2Sm71_gMSuv6xvCERHGZuP4MfThg8";
