@@ -12,3 +12,5 @@ key.properties
 **/*.keystore
 **/*.jks
 tanya_gemini_chatbot\lib\.env
+# Environment variables
+.env
