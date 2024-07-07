@@ -61,6 +61,22 @@ This Flutter project fetches and displays the followers of a given GitHub user. 
 
 ## ScreenShots
 
+![Screenshot_20240707_143702](https://github.com/dev04sa/FlutterTeam_Tasks/assets/129666293/c9d0a1d9-041e-4235-9224-d6d28b8ab434)
+
+
+
+
+
+![Screenshot_20240707_143641](https://github.com/dev04sa/FlutterTeam_Tasks/assets/129666293/1919d93e-cf77-43a2-ad9f-7f4c744a5d46)
+
+
+
+
+
+https://github.com/dev04sa/FlutterTeam_Tasks/assets/129666293/88d8245e-83e0-4791-8e70-ea4a8aa461a1
+
+
+
 
 
 
