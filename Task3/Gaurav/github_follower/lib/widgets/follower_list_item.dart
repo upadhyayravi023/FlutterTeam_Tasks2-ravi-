@@ -6,6 +6,7 @@ import '../res/app_theme.dart';
 import '../screens/followers_screen.dart';
 
 
+// ignore: must_be_immutable
 class FollowerListItem extends StatelessWidget {
   final List<FollowersModel> followersList;
   FollowersModel userData;
@@ -24,8 +25,8 @@ class FollowerListItem extends StatelessWidget {
             Container(
                 height: 200,
                 width: 200,
-                decoration: BoxDecoration(
-                  color: AppTheme.falcon300.withOpacity(0.3),
+                decoration: const BoxDecoration(
+                  color: AppTheme.falcon300,
                   shape: BoxShape.circle,
                 ),
                 alignment: Alignment.center,
@@ -48,6 +49,7 @@ class FollowerListItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(Icons.group),
+                const SizedBox(width: 5,),
                 Text(
                   followersList.length.toString(),
                   style: Theme.of(context).textTheme.titleLarge,
@@ -111,6 +113,7 @@ class FollowerCard extends StatelessWidget {
                   builder: (context, fprovider, child) {
                     return TextButton(
                         onPressed: () {
+                          Navigator.pop(context);
                           Navigator.push(
                               context,
                               MaterialPageRoute(

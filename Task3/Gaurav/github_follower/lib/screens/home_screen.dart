@@ -54,14 +54,14 @@ class _HomeScreenState extends State<HomeScreen> {
               builder: (context, fprovider, child) {
                 return InkWell(
                   onTap: () {
-                    if(userCtrl.text.isNotEmpty){
+                    if (userCtrl.text.isNotEmpty) {
                       Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => FollowersScreen(
-                                username: userCtrl.text.toString())));
-                    fprovider.fetchFollowers(userCtrl.text.toString());
-                    fprovider.fetchUser(userCtrl.text.toString());
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => FollowersScreen(
+                                  username: userCtrl.text.toString())));
+                      fprovider.fetchFollowers(userCtrl.text.toString());
+                      fprovider.fetchUser(userCtrl.text.toString());
                     }
                   },
                   child: Container(

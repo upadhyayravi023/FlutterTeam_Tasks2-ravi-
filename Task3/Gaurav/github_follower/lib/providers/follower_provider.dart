@@ -6,14 +6,19 @@ import '../services/github_api_service.dart';
 class FollowerProvider extends ChangeNotifier {
   final GetApiData _apiData = GetApiData();
   List<FollowersModel> _followers = [];
-  bool fetchingData = false;
   List<FollowersModel> get followers => _followers;
-   late FollowersModel _userData;
-   FollowersModel get userData => _userData;
+
+  bool fetchingData = false;
+
+  late FollowersModel _userData;
+  FollowersModel get userData => _userData;
 
   Future<void> fetchUser(String username) async {
     try {
-      _userData = (await _apiData.fetchMe(username))!;
+      final user = await _apiData.fetchMe(username);
+      if (user != null) {
+        _userData = user;
+      }
       notifyListeners();
     } catch (e) {
       log(e.toString());

@@ -21,7 +21,7 @@ class _FollowersScreenState extends State<FollowersScreen> {
         title: const Text("Followers List"),
       ),
       body: Consumer<FollowerProvider>(builder: (context, fprovider, child) {
-        if(fprovider.fetchingData==false && fprovider.followers.isEmpty==true){
+        if(!fprovider.fetchingData && fprovider.followers.isEmpty){
           fprovider.fetchUser(widget.username);
           fprovider.fetchFollowers(widget.username);
         }
