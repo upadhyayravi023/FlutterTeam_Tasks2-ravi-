@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:github_follower/providers/follower_provider.dart';
-import 'package:github_follower/res/app_theme.dart';
-import 'package:github_follower/widgets/follower_list_item.dart';
+import '../providers/follower_provider.dart';
+import '../res/app_theme.dart';
+import '../widgets/follower_list_item.dart';
 import 'package:provider/provider.dart';
 
 class FollowersScreen extends StatefulWidget {

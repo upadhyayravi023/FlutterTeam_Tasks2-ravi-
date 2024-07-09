@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
-import 'package:github_follower/models/follower.dart';
-import 'package:github_follower/services/github_api_service.dart';
+import '../models/follower.dart';
+import '../services/github_api_service.dart';
 
 class FollowerProvider extends ChangeNotifier {
   final GetApiData _apiData = GetApiData();

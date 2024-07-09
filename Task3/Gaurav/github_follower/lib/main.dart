@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_follower/providers/follower_provider.dart';
-import 'package:github_follower/screens/followers_screen.dart';
+import '../providers/follower_provider.dart';
 import 'package:provider/provider.dart';
 import '../res/app_theme.dart';
 import '../screens/home_screen.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:github_follower/providers/follower_provider.dart';
+import '../providers/follower_provider.dart';
 import 'package:provider/provider.dart';
 import '../models/follower.dart';
 import '../res/app_theme.dart';

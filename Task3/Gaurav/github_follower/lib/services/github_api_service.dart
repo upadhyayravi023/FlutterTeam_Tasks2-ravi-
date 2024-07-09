@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:github_follower/models/follower.dart';
+import '../models/follower.dart';
 import 'package:http/http.dart' as http;
 
 class GetApiData {
