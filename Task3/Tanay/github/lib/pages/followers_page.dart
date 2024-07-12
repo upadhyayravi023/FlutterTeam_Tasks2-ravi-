@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:github/widgets/follower_list_item.dart';
 import '../provider/follower_provider.dart';
 
 class followers extends StatefulWidget{
@@ -43,31 +43,7 @@ class _followersState extends State<followers>{
                             .followers
                             .length,
                         itemBuilder: (context, index) {
-                        final String username = value.followers[index].username.toString();
-                          return Padding(
-                            padding: const EdgeInsets.only(left: 20, right: 20),
-                            child: Column(
-                              children: [
-                                ListTile(
-                                  title: Text(username),
-                                  leading: CircleAvatar(backgroundImage: NetworkImage(
-                                          value.followers[index].imageUrl.toString()),
-                                    radius: 30,),
-                                  trailing: GestureDetector(
-                                    onTap: () async {
-                                      final prefs = await SharedPreferences
-                                          .getInstance();
-                                      prefs.setString("username", username);
-                                      value.getData();
-                                    },
-                                    child: const Text("Followers",
-                                      style: TextStyle(color: Colors.blue,fontSize: 15),),
-                                  ),
-                                ),
-                                const Divider(color: Colors.grey,thickness: 1,)
-                              ],
-                            ),
-                          );
+                          return followerListItem(imageUrl: value.followers[index].imageUrl.toString(), username: value.followers[index].username.toString());
                         }),
                   )
                 ],
