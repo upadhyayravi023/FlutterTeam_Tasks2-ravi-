@@ -1,46 +1,22 @@
-import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:github/Services/github_api_services.dart';
+import 'package:github/models/userinfo.dart';
 
 class FollowerProvider with ChangeNotifier {
+  final GithubApiService _apiService = GithubApiService();
+  bool _isLoading = false;
+  List<UserInfo> _followers = [];
+  List<UserInfo> get followers => _followers;
+  late UserInfo _userinfo;
+  UserInfo get userinfo => _userinfo;
+  bool get isloading => _isLoading;
 
-  List Followers = [];
-  var userinfo;
-
-  final String token = dotenv.env['Token'].toString();
-
-  getuserinfo() => userinfo;
-  List<dynamic> getfollower() => Followers;
-
-  void notifyfollowers() {
+  Future<void> getData() async {
+    _isLoading = true;
+    notifyListeners();
+    _followers = await _apiService.getFollowers();
+    _userinfo = await _apiService.getUser();
+    _isLoading = false;
     notifyListeners();
   }
-
-  void importFollowers() async {
-    
-    // print("importing followers");
-
-    final prefs = await SharedPreferences.getInstance();
-    final username = prefs.getString('username');
-    Followers = [];
-    final response = await http.get(
-      Uri.parse("https://api.github.com/users/$username/followers"),
-      headers: {'Authorization': 'Bearer $token'},
-    );
-    var data = jsonDecode(response.body.toString());
-
-    for (Map i in data) {
-      Followers.add(i);
-    }
-    final response2 = await http.get(
-      Uri.parse("https://api.github.com/users/$username"),
-      headers: {'Authorization': 'Bearer $token'},
-    );
-    userinfo = jsonDecode(response2.body.toString());
-    notifyfollowers();
-  }
-
-  
 }
