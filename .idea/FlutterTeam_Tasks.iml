@@ -90,6 +90,24 @@
       <excludeFolder url="file://$MODULE_DIR$/Task2/Tanay/ai_chat_bot/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Task2/Tanay/ai_chat_bot/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Task2/Tanay/ai_chat_bot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Aditya/gemini_ai_bot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Aditya/gemini_ai_bot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Aditya/gemini_ai_bot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Divija/gemini_chatbot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Divija/gemini_chatbot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Divija/gemini_chatbot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/rahul/ai_bot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/rahul/ai_bot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/rahul/ai_bot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/ravi/chat_bot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/ravi/chat_bot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/ravi/chat_bot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/tanya/tanya_gemini_chatbot/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/tanya/tanya_gemini_chatbot/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/tanya/tanya_gemini_chatbot/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Priyanshi/ai/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Priyanshi/ai/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Task2/Priyanshi/ai/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
