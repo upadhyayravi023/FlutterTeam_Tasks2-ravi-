@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:github/screens/followers.dart';
 
 import 'package:github/screens/homepage.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context)=>Homepage()
+        '/':(context)=>Followers()
       },
     );
   }

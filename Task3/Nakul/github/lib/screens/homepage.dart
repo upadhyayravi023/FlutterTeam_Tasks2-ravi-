@@ -33,6 +33,7 @@ class _HomepageState extends State<Homepage> {
                    
                     Container(
                       height: 90,
+                    
                       
                       //if you want to set the size of textfromfield put it in container set container height and 
                       //turn expands true and maxlines null
