@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:github/provider/follower_provider.dart';
+import 'package:github/screens/followers.dart';
+import 'package:provider/provider.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -8,7 +11,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  TextEditingController username=new TextEditingController();
+  TextEditingController _controller=new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +46,7 @@ class _HomepageState extends State<Homepage> {
                         expands: true,
                         maxLines: null,
                         
-                        controller: username,
+                        controller: _controller,
                         
                         cursorColor: Colors.red,
                         
@@ -71,8 +74,17 @@ class _HomepageState extends State<Homepage> {
                       ),
                     ),
                     SizedBox(height: 20,),
-                   GestureDetector(
-                    onTap: () {
+                    Consumer<FollowersProvider>
+                    (builder: (context,value,child){
+                      return  GestureDetector(
+                    onTap: () async {
+                      if(_controller.text.isNotEmpty){
+                        await value.getdata(_controller.text.toString());
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Followers()));
+
+                        
+                      }
+                      
                       
                     },
                     child:  Container(
@@ -86,10 +98,14 @@ class _HomepageState extends State<Homepage> {
                
                       ),
                       alignment:Alignment.center,
-                      child: Text("Get Your Followers Now",style: TextStyle(color: Colors.white,fontSize: 16),),
+                      child:value.isloading? CircularProgressIndicator(color:Colors.white,
+                      strokeAlign: BorderSide.strokeAlignCenter,):
+                       Text("Get Your Followers Now",style: TextStyle(color: Colors.white,fontSize: 16),),
                     
                     ),
-                   )
+                   );
+                    })
+                  
                     
                   ],
                          ),
