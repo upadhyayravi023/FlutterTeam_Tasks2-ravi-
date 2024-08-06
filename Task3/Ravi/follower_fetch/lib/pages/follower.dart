@@ -14,58 +14,48 @@ class _FollowersState extends State<Followers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Followers"),
+        title: Text('Followers'),
       ),
       body: SingleChildScrollView(
         child: Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.all(22),
+          padding: const EdgeInsets.all(16.0),
           child: Consumer<gitProvider>(
             builder: (context, value, child) {
-              if (value.userinfo.name != null) {
-                return Column(
-                  children: [
-                    const SizedBox(height: 32),
-                    ClipOval(
-                      child: Image.network(value.userinfo.avatar_url.toString(), width: 120, height: 120, fit: BoxFit.cover,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    Text(
-                      value.userinfo.name.toString(),
-                      style: const TextStyle(fontSize: 26, color: Colors.black, fontWeight: FontWeight.w700,),),
-                    const SizedBox(height: 30),
-                    SizedBox(
-                      height: 450,
-                      child: ListView.builder(
-                        itemCount: value.followers.length,
-                        itemBuilder: (context, index) {
-                          return Card(
-                            margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            elevation: 5,
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                backgroundImage: NetworkImage(
-                                  value.followers[index].avatar_url.toString(),
-                                ),
-                              ),
-                              title: Text(
-                                value.followers[index].name.toString(),
-                                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ],
-                );
+              if (value.userinfo == null) {
+                return const CircularProgressIndicator();
               }
-              return const CircularProgressIndicator();
+
+              return Column(
+                children: [
+                  const SizedBox(height: 40),
+                  CircleAvatar(
+                    backgroundImage: NetworkImage(value.userinfo.avatar_url.toString()),
+                    radius: 60,
+                  ),
+                  const SizedBox(height: 10),
+                  Text(value.userinfo.name.toString(), style: const TextStyle(fontSize: 27, color: Colors.black, fontWeight: FontWeight.w700,),),
+                  const SizedBox(height: 30),
+                  SizedBox(
+                    height: 450,
+                    child: ListView.builder(
+                      itemCount: value.followers.length,
+                      itemBuilder: (context, index) {
+                        return Card(
+                          margin: const EdgeInsets.symmetric(vertical: 3.0, horizontal: 1.0),
+                          elevation: 7,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child:  FollowerListItem(imageUrl: value.followers[index].avatar_url.toString(), username: value.followers[index].name.toString(),
+                          ),
+
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              );
             },
           ),
         ),
